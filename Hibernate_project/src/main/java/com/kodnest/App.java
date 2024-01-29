@@ -5,8 +5,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import com.kodnest.entity.Bike;
-import com.kodnest.entity.Student;
+import com.kodnest.onetoone.Customer;
+import com.kodnest.onetoone.Product;
 
 public class App {
 	public static void main(String[] args) {
@@ -17,13 +17,15 @@ public class App {
 		Session session = factory.openSession();
 //		System.out.println(session + "sucess");
 
-		Transaction tr = session.beginTransaction();// transaction started
+		try {
+
+			Transaction tr = session.beginTransaction();// transaction started
 //		Student s = new Student(1, "jack");
 //		session.save(s);// insertion of records using save()
 
 //		System.out.println(student.getId() + "-" + student.getName());
 //		
-		// using toString ()
+			// using toString ()
 //		Student student = session.get(Student.class, 1);
 //		System.out.println(student);
 //		Bike b = new Bike("ktm", 500000);
@@ -35,21 +37,29 @@ public class App {
 //			System.out.println(student);
 //		}
 
-		Bike bike = new Bike("KTM", 3);
+			Product p = new Product();
+			Customer c = new Customer(3, "kodnest", p);
 
-		session.save(bike);
-		Student student = new Student(1, "john", bike);
-		session.save(student);
+			p.setPid(3);
+//			p.setPname("dell");
 
-		tr.commit(); // commit
-		session.close();
-		factory.close();
+//		Bike bike = new Bike("KTM", 3);
+
+//		session.save(bike);
+			session.save(p);
+			session.save(c);
+//		Student student = new Student(1, "john", bike);
+//		session.save(student);
+
+			tr.commit(); // commit
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+
+		} finally {
+
+			session.close();
+			factory.close();
+		}
 	}
 }
-
-
-
-
-
-
-

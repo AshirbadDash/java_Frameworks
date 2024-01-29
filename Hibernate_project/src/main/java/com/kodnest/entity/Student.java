@@ -1,7 +1,10 @@
+
 package com.kodnest.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 /**
@@ -11,6 +14,7 @@ import javax.persistence.OneToOne;
 public class Student {
 
 	@Id
+	@Column(name = "Student_id")
 	int id;
 	String name;
 
@@ -50,6 +54,7 @@ public class Student {
 	}
 
 	@OneToOne
+	@JoinColumn(name = "bike_key")
 	Bike bike;
 
 	/**

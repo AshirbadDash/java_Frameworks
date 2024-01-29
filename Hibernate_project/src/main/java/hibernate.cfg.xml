@@ -19,7 +19,21 @@
 		<property name="hbm2ddl.auto">create</property>
 		<property name="show_sql">true</property>
 
-		<mapping class="com.kodnest.entity.Student"></mapping>
-		<mapping class="com.kodnest.entity.Bike"></mapping>
+	<!-- <mapping class="com.kodnest.entity.Student"></mapping>
+		<mapping class="com.kodnest.entity.Bike"></mapping>-->
+		
+		
+	<!--	<mapping class="com.kodnest.onetoone.Customer"></mapping>
+		<mapping class="com.kodnest.onetone.Product"></mapping>-->
+		
+		
+	<!--	<mapping class="com.kodnest.onetomany.Customer"></mapping>
+		<mapping class="com.kodnest.onetomany.Product"></mapping>-->
+		
+		
+		<mapping class="com.kodnest.manytomany.Customer"></mapping>
+		<mapping class="com.kodnest.manytomany.Product"></mapping>
+		
+		
 	</session-factory>
 </hibernate-configuration>
