@@ -6,9 +6,17 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 class InsertTable {
+	
+
 	private final static String url = "jdbc:mysql://localhost/kodnest";
 	private final static String name = "root";
 	private final static String password = "WASD@1234";
+	
+/**
+ * 
+ * @throws ClassNotFoundException
+ * @throws SQLException
+ */
 
 	public static void insert() throws ClassNotFoundException, SQLException {
 
@@ -29,6 +37,9 @@ class InsertTable {
 		int count = stmt.executeUpdate(query);
 
 		System.out.println("modified " + count + " no of rows");
+		
+		
+		
 
 		if (count > 0) {
 

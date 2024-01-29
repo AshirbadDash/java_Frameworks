@@ -5,6 +5,13 @@ import java.util.Scanner;
 
 public class MAIN {
 
+ /**
+  * 
+  * @param args
+  * @throws SQLException
+  * @throws ClassNotFoundException
+  * @throws InterruptedException
+  */
 	public static void main(String[] args) throws SQLException, ClassNotFoundException, InterruptedException {
 
 		System.out.println("APPLICATION STARTED");
@@ -52,6 +59,7 @@ public class MAIN {
 				System.out.println("Invalid choice");
 				break;
 			}
+//			sc.close();
 
 		}
 
