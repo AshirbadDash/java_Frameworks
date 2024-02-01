@@ -15,45 +15,57 @@ public class App {
 
 		SessionFactory factory = cfg.buildSessionFactory();
 		Session session = factory.openSession();
-//		System.out.println(session + "sucess");
+		// System.out.println(session + "sucess");
 
 		try {
 
 			Transaction tr = session.beginTransaction();// transaction started
-//		Student s = new Student(1, "jack");
-//		session.save(s);// insertion of records using save()
+			// Student s = new Student(1, "jack");
+			// session.save(s);// insertion of records using save()
 
-//		System.out.println(student.getId() + "-" + student.getName());
-//		
+			// System.out.println(student.getId() + "-" + student.getName());
+			//
 			// using toString ()
-//		Student student = session.get(Student.class, 1);
-//		System.out.println(student);
-//		Bike b = new Bike("ktm", 500000);
-//		session.save(b);// insertion of records using save()
+			// Student student = session.get(Student.class, 1);
+			// System.out.println(student);
+			// Bike b = new Bike("ktm", 500000);
+			// session.save(b);// insertion of records using save()
 
-//		List<Student> list = session.createQuery("from Student where id").list();
-//
-//		for (Student student : list) {
-//			System.out.println(student);
-//		}
+			// List<Student> list = session.createQuery("from Student where id").list();
+			//
+			// for (Student student : list) {
+			// System.out.println(student);
+			// }
 
-			Product p = new Product();
-			Customer c = new Customer(3, "kodnest", p);
+			Product p1 = new Product();
+			p1.setPid(3);
+			p1.setPname("dell");
 
-			p.setPid(3);
-//			p.setPname("dell");
+			// p.setCustomer(c);
 
-//		Bike bike = new Bike("KTM", 3);
+			Customer c1 = new Customer();
+			c1.setId(1);
+			c1.setName("jack");
+			p1.setCustomer(c1);
+			c1.setProduct(p1);
+			session.save(p1);
+			session.save(c1);
 
-//		session.save(bike);
-			session.save(p);
-			session.save(c);
-//		Student student = new Student(1, "john", bike);
-//		session.save(student);
+			Product p2 = new Product();
+			p2.setPid(4);
+			p2.setPname("hp");
+
+			Customer c2 = new Customer();
+			c2.setId(2);
+			c2.setName("jill");
+			p2.setCustomer(c2);
+			c2.setProduct(p2);
+			session.save(p2);
+			session.save(c2);
 
 			tr.commit(); // commit
 		} catch (Exception e) {
-			// TODO: handle exception
+
 			e.printStackTrace();
 
 		} finally {

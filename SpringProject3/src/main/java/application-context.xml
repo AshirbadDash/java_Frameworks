@@ -1,0 +1,56 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="e1" class="com.kodnest.bean.Employee"> <property name="technologies" 
+		value="spring"></property> <property name="project" value="spring-application"></property> 
+		<property name="organization" value="kodnest
+		"></property> </bean> -->
+	<bean id="me1" class="com.kodnest.bean.MultipleEmployees">
+		<property name="technologies">
+			<list>
+
+				<value>Java</value>
+				<value>HTML</value>
+				<value>CSS</value>
+				<value>JS</value>
+				<value>PYTHON</value>
+			</list>
+		</property>
+		<property name="projects">
+			<set>
+
+				<value>Project-1</value>
+				<value>Project-2</value>
+				<value>Project-3</value>
+				<value>Project-4</value>
+				<value>Project-5</value>
+			</set>
+		</property>
+		<property name="organizations">
+			<map>
+				<entry key="001" value="Deloitte"></entry>
+				<entry key="002" value="JP Morgan"></entry>
+				<entry key="003" value="Amazon"></entry>
+				<entry key="004" value="Microsoft"></entry>
+				<entry key="005" value="Google"></entry>
+
+
+			</map>
+
+
+		</property>
+
+
+	</bean>
+
+
+
+	<!-- collaborators and configuration for this bean go here -->
+
+
+	<!-- more bean definitions go here -->
+
+</beans>

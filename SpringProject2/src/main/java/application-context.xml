@@ -1,0 +1,50 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="l1" class="com.kodnest.bean.Laptop">
+		<constructor-arg name="name" value="hp"></constructor-arg>
+		<constructor-arg name="color" value="silver"></constructor-arg>
+		
+		<!-- <property name="name" value="hp"></property>
+		<property name="color" value="silver"></property>
+		 -->
+		
+		
+	</bean>
+	 
+	
+	
+	 <bean id="l2" class="com.kodnest.bean.Laptop">
+		<property name="name" value="lenovo"></property>
+		<property name="color" value="blue"></property>
+	</bean>
+	<!--<bean id="l3" class="com.kodnest.bean.Laptop">
+		<property name="name" value="apple"></property>
+		<property name="color" value="golden"></property>
+	</bean>
+	<bean id="l4" class="com.kodnest.bean.Laptop">
+
+		<property name="name" value="hp"></property>
+		<property name="color" value="silver"></property>
+	</bean>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+	<!-- collaborators and configuration for this bean go here -->
+
+
+	<!-- more bean definitions go here -->
+
+</beans>
