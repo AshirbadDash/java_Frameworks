@@ -2,7 +2,6 @@ package com.kodnest.main;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-
 import com.kodnest.beans.University;
 
 public class App {

@@ -1,5 +1,8 @@
 package com.kodnest.beans;
 
+import org.springframework.context.annotation.Scope;
+
+@Scope(scopeName = "prototype")
 public class Trainer {
 	int id;
 	String name;
